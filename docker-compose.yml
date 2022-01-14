@@ -10,7 +10,7 @@ services:
       - network1
 
   simapi-container:
-    image: 316590403336.dkr.ecr.us-east-1.amazonaws.com/fpgasim:fpgasim
+    image: 316590403336.dkr.ecr.us-east-1.amazonaws.com/fpgasim:latest
     ports:
       - 5000:5000
       - 12346:12346

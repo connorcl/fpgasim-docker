@@ -4,7 +4,7 @@ FROM ubuntu:21.10
 # prevent interactive prompts when installing software
 ENV DEBIAN_FRONTEND=noninteractive
 
-# install deps from apt repos
+# install dependencies from Ubuntu repos
 RUN apt update && apt install -y ghdl ghdl-llvm python3 python3-pip git make
 
 # create build directory
@@ -29,4 +29,3 @@ EXPOSE 5000 12346
 
 WORKDIR /build/simctrl
 CMD ["uwsgi", "--ini", "uwsgi.ini"]
-# CMD ["/bin/bash"]
